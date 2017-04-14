@@ -20,6 +20,15 @@ read -p 'Email for ssh key: ' sshmail
 ssh-keygen -t rsa -b 4096 -C sshmail
 
 echo "installing more packages"
-sudo apt-get install terminator cmus clementine owncloud-client shutter keepassx openjdk-8-jre calibre ppa-purge --y
+sudo apt-get install terminator cmus clementine owncloud-client shutter keepassx openjdk-8-jre calibre ppa-purge wget --y
+
+echo "Cloning emacs.d"
+git clone https://github.com/lislis/prelude.git ~/.emacs.d
+
+echo "installing oh my zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "Cloning spezi theme"
+wget -o ~/.oh-my-zsh/custom/themes/spezi.zsh-theme "https://gist.githubusercontent.com/lislis/0be6da335835de6af7bae92e70b7901f/raw/657a2e46379badc197d484cf46492467ce4dfac7/spezi.zsh-theme"
 
 echo "so far so good"
