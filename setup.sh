@@ -30,6 +30,13 @@ git clone https://github.com/lislis/prelude.git ~/.emacs.d
 
 echo "Installing Rust/n/n"
 curl https://sh.rustup.rs -sSf | sh
+echo "Rust installed! Don't forget to check out other notes from the script!/n/n"
+
+echo "Installing rbenv/n/n"
+# https://github.com/rbenv/rbenv#installation
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd ~/.rbenv && src/configure && make -C src
+echo "rbenv is installed but still needs to be configured!!!/n/n"
 
 echo "installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
