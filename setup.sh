@@ -28,6 +28,9 @@ sudo apt-get install indicator-bulletin indicator-weather terminator cmus clemen
 echo "Cloning emacs.d"
 git clone https://github.com/lislis/prelude.git ~/.emacs.d
 
+echo "Installing Rust/n/n"
+curl https://sh.rustup.rs -sSf | sh
+
 echo "installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
