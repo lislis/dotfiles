@@ -36,6 +36,7 @@ echo "Installing rbenv/n/n"
 # https://github.com/rbenv/rbenv#installation
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 cd ~/.rbenv && src/configure && make -C src
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo "rbenv is installed but still needs to be configured!!!/n/n"
 
 echo "installing oh my zsh"
