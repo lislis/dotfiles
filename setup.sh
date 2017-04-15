@@ -4,26 +4,40 @@ echo "Check for updates"
 sudo apt-get update
 
 echo "Installing git and zsh emacs"
-sudo apt-get install git zsh emacs --y
+sudo apt-get install git zsh emacs -y
 
 echo "Configure git"
 read -p 'Git user name: ' gituser
 read -p 'Git email: ' gitmail
 read -p 'Git editor: ' giteditor
 
-git config --global user.name gituser
-git config --global user.email gitmail
-git config --global core.editor giteditor
+git config --global user.name $gituser
+git config --global user.email $gitmail
+git config --global core.editor $giteditor
 
 echo "generating ssh key"
 read -p 'Email for ssh key: ' sshmail
-ssh-keygen -t rsa -b 4096 -C sshmail
+ssh-keygen -t rsa -b 4096 -C $sshmail
 
 echo "installing more packages"
-sudo apt-get install terminator cmus clementine owncloud-client shutter keepassx openjdk-8-jre calibre ppa-purge wget --y
+sudo add-apt-repository ppa:1047481448-2/sergkolo
+sudo add-apt-repository ppa:kasra-mp/ubuntu-indicator-weather
+
+sudo apt-get install indicator-bulletin indicator-weather terminator cmus clementine owncloud-client shutter keepassx openjdk-8-jre calibre ppa-purge wget -y
 
 echo "Cloning emacs.d"
 git clone https://github.com/lislis/prelude.git ~/.emacs.d
+
+echo "Installing Rust/n/n"
+curl https://sh.rustup.rs -sSf | sh
+echo "Rust installed! Don't forget to check out other notes from the script!/n/n"
+
+echo "Installing rbenv/n/n"
+# https://github.com/rbenv/rbenv#installation
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd ~/.rbenv && src/configure && make -C src
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo "rbenv is installed but still needs to be configured!!!/n/n"
 
 echo "installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
