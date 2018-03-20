@@ -91,9 +91,15 @@ if [ -d "${RBENV_ROOT}" ]; then
   eval "$(rbenv init -)"
 fi
 
-NPM_PACKAGES=/home/lislis/.npm-packages
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
+export PATH="$PATH:$HOME/.npm-packages/bin"
+export PATH="$PATH:$HOME/App"
+export PATH="$PATH:$HOME/bin"
+
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source ~/.local/bin/virtualenvwrapper.sh
+export WORKON_HOME=/home/lislis/.virtualenvs
+export PIP_VIRTUALENV_BASE=/home/lislis/.virtualenvs
 
 alias ed="emacs --daemon"
 alias e="emacsclient -nc"
