@@ -9,10 +9,11 @@ sudo apt-get install git zsh emacs -y
 echo "installing more packages"
 sudo add-apt-repository ppa:1047481448-2/sergkolo
 sudo add-apt-repository ppa:kasra-mp/ubuntu-indicator-weather
+sudo add-apt-repository ppa:phoerious/keepassxc
 
 sudo apt-get update
 
-sudo apt-get install indicator-bulletin indicator-weather terminator cmus clementine owncloud-client shutter keepassxd clojure openjdk-8-jre calibre ppa-purge wget -y
+sudo apt-get install indicator-bulletin indicator-weather terminator cmus clementine owncloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget -y
 
 echo "Configure git"
 read -p 'Git user name: ' gituser
