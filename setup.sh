@@ -1,16 +1,16 @@
 echo "Welcome to the setup script. Fingers crossed!"
 
 echo "Check for updates"
-sudo apt-get update
+sudo apt update
 
 echo "Addiing ppas"
 sudo add-apt-repository ppa:phoerious/keepassxc
 sudo add-apt-repository ppa:nextcloud-devs/client
 
-sudo apt-get update
+sudo apt update
 
 echo "Installing software packages"
-sudo apt-get install git zsh emacs terminator cmus clementine nextcloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget -y
+sudo apt install git zsh emacs terminator cmus clementine nextcloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget curl -y
 
 echo "Configure git"
 read -p 'Git user name: ' gituser
