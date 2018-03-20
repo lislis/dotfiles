@@ -5,11 +5,12 @@ sudo apt-get update
 
 echo "Addiing ppas"
 sudo add-apt-repository ppa:phoerious/keepassxc
+sudo add-apt-repository ppa:nextcloud-devs/client
 
 sudo apt-get update
 
 echo "Installing software packages"
-sudo apt-get install git zsh emacs terminator cmus clementine owncloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget -y
+sudo apt-get install git zsh emacs terminator cmus clementine nextcloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget -y
 
 echo "Configure git"
 read -p 'Git user name: ' gituser
