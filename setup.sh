@@ -6,6 +6,14 @@ sudo apt-get update
 echo "Installing git and zsh emacs"
 sudo apt-get install git zsh emacs -y
 
+echo "installing more packages"
+sudo add-apt-repository ppa:1047481448-2/sergkolo
+sudo add-apt-repository ppa:kasra-mp/ubuntu-indicator-weather
+
+sudo apt-get update
+
+sudo apt-get install indicator-bulletin indicator-weather terminator cmus clementine owncloud-client shutter keepassxd clojure openjdk-8-jre calibre ppa-purge wget -y
+
 echo "Configure git"
 read -p 'Git user name: ' gituser
 read -p 'Git email: ' gitmail
@@ -18,12 +26,6 @@ git config --global core.editor $giteditor
 echo "generating ssh key"
 read -p 'Email for ssh key: ' sshmail
 ssh-keygen -t rsa -b 4096 -C $sshmail
-
-echo "installing more packages"
-sudo add-apt-repository ppa:1047481448-2/sergkolo
-sudo add-apt-repository ppa:kasra-mp/ubuntu-indicator-weather
-
-sudo apt-get install indicator-bulletin indicator-weather terminator cmus clementine owncloud-client shutter keepassxd clojure openjdk-8-jre calibre ppa-purge wget -y
 
 echo "Cloning emacs.d"
 git clone https://github.com/lislis/prelude.git ~/.emacs.d
