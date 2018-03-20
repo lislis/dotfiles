@@ -23,7 +23,7 @@ echo "installing more packages"
 sudo add-apt-repository ppa:1047481448-2/sergkolo
 sudo add-apt-repository ppa:kasra-mp/ubuntu-indicator-weather
 
-sudo apt-get install indicator-bulletin indicator-weather terminator cmus clementine owncloud-client shutter keepassx openjdk-8-jre calibre ppa-purge wget -y
+sudo apt-get install indicator-bulletin indicator-weather terminator cmus clementine owncloud-client shutter keepassxd clojure openjdk-8-jre calibre ppa-purge wget -y
 
 echo "Cloning emacs.d"
 git clone https://github.com/lislis/prelude.git ~/.emacs.d
