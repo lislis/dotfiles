@@ -3,17 +3,13 @@ echo "Welcome to the setup script. Fingers crossed!"
 echo "Check for updates"
 sudo apt-get update
 
-echo "Installing git and zsh emacs"
-sudo apt-get install git zsh emacs -y
-
-echo "installing more packages"
-sudo add-apt-repository ppa:1047481448-2/sergkolo
-sudo add-apt-repository ppa:kasra-mp/ubuntu-indicator-weather
+echo "Addiing ppas"
 sudo add-apt-repository ppa:phoerious/keepassxc
 
 sudo apt-get update
 
-sudo apt-get install indicator-bulletin indicator-weather terminator cmus clementine owncloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget -y
+echo "Installing software packages"
+sudo apt-get install git zsh emacs terminator cmus clementine owncloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget -y
 
 echo "Configure git"
 read -p 'Git user name: ' gituser
