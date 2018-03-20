@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:nextcloud-devs/client
 sudo apt update
 
 echo "Installing software packages"
-sudo apt install git zsh emacs terminator cmus clementine nextcloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget curl -y
+sudo apt install git zsh emacs terminator cmus clementine nextcloud-client shutter keepassxc clojure openjdk-8-jre calibre ppa-purge wget curl vlc -y
 
 echo "Configure git"
 read -p 'Git user name: ' gituser
