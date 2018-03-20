@@ -42,7 +42,4 @@ echo "rbenv is installed but still needs to be configured!!!/n/n"
 echo "installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "Cloning spezi theme"
-wget -o ~/.oh-my-zsh/custom/themes/spezi.zsh-theme "https://gist.githubusercontent.com/lislis/0be6da335835de6af7bae92e70b7901f/raw/657a2e46379badc197d484cf46492467ce4dfac7/spezi.zsh-theme"
-
-echo "so far so good"
+echo "so far so good!"
