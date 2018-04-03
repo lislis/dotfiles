@@ -45,6 +45,8 @@ echo "Installing Node/n/n"
 # https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 sudo apt-get install -y nodejs
+mkdir ~/.npm-packages
+npm config set prefix '~/.npm-packages'
 echo "Node installed, but check the notes in the script/n/n"
 # @todo configure path
 
