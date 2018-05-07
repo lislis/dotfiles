@@ -6,13 +6,16 @@ sudo apt update
 echo "Addiing ppas/n/n"
 sudo add-apt-repository ppa:phoerious/keepassxc
 sudo add-apt-repository ppa:nextcloud-devs/client
+sudo add-apt-repository ppa:alexlarsson/flatpak
 
 sudo apt update
 
 echo "Installing software packages/n/n"
-sudo apt install git zsh emacs terminator clojure openjdk-8-jre ppa-purge wget curl vlc ruby-ffi autoconf libtool postgresql postgresql-contrib libpq-dev libsqlite3-dev -y
+sudo apt install git zsh emacs terminator flatpak gnome-software-plugin-flatpak clojure openjdk-8-jre ppa-purge wget curl vlc ruby-ffi autoconf libtool postgresql postgresql-contrib libpq-dev libsqlite3-dev -y
 sudo apt install cmus clementine inkscape nextcloud-client shutter keepassxc calibre -y
 
+echo "Add flatpak repo/n/n"
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "Configure git/n"
 read -p 'Git user name: ' gituser
