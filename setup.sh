@@ -17,6 +17,9 @@ sudo apt install cmus clementine inkscape nextcloud-client shutter keepassxc cal
 echo "Add flatpak repo\n\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+echo "Download Heroku CLI\n\n"
+sudo snap install heroku --classic
+
 echo "Configure git\n"
 read -p 'Git user name: ' gituser
 read -p 'Git email: ' gitmail
