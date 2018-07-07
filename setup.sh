@@ -11,7 +11,7 @@ sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 
 echo "Installing software packages\n\n"
-sudo apt install git zsh emacs terminator flatpak gnome-software-plugin-flatpak clojure openjdk-8-jre ppa-purge wget curl vlc ruby-ffi openvpn network-manager-openvpn network-manager-openvpn-gnome autoconf libtool postgresql postgresql-contrib libpq-dev libsqlite3-dev -y
+sudo apt install git zsh emacs terminator flatpak gnome-software-plugin-flatpak clojure openjdk-8-jre ppa-purge wget curl vlc ruby-ffi openvpn network-manager-openvpn network-manager-openvpn-gnome autoconf libtool postgresql postgresql-contrib libpq-dev libssl-dev libreadline-dev zlib1g-dev libsqlite3-dev -y
 sudo apt install cmus clementine inkscape nextcloud-client shutter keepassxc calibre chromium mattermost discord -y
 
 echo "Add flatpak repo\n\n"
