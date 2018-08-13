@@ -91,9 +91,13 @@ if [ -d "${RBENV_ROOT}" ]; then
   eval "$(rbenv init -)"
 fi
 
+#  used by Karma test runner
+export CHROME_BIN=chromium-browser
+
 export PATH="$PATH:$HOME/.npm-packages/bin"
 export PATH="$PATH:$HOME/App"
 export PATH="$PATH:$HOME/bin"
+export PATH=/home/lislis/anaconda3/bin:$PATH
 
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -103,3 +107,6 @@ export PIP_VIRTUALENV_BASE=/home/lislis/.virtualenvs
 
 alias ed="emacs --daemon"
 alias e="emacsclient -nc"
+alias f="xdg-open"
+
+alias restart_mouse="sudo modprobe psmouse"
