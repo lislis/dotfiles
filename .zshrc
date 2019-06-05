@@ -97,7 +97,7 @@ export CHROME_BIN=chromium-browser
 export PATH="$PATH:$HOME/.npm-packages/bin"
 export PATH="$PATH:$HOME/App"
 export PATH="$PATH:$HOME/bin"
-export PATH=/home/lislis/anaconda3/bin:$PATH
+#export PATH=/home/lislis/anaconda3/bin:$PATH
 
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
