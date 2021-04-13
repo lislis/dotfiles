@@ -5,13 +5,15 @@ Eternal WIP.
 
 ## How, what?
 
-- Download and unzip this repository, preferably directly in `~`.
+- Download and unzip this repository
 
-- Inside it run `$ ./scripts/1-setup.sh` to install a lot of stuff.
+- `cd` into it and run `$ ./setup/00.sh` to update packages and install a lot of stuff
 
-- Close and open a new shell, it will now run zsh!
+- Run `$ ./setup/01.sh` to configure git, generate a ssh key, install zsh and clone emacs.d
 
-- Back in the dotfiles folder, run `$ ./scripts/2-copy.sh` to copy over config files.
+- Run `$ ./setup/02.sh` to copy the zsh theme and zshrc into their corresponding places
+
+- Logout and in and voila!
 
 - Install `./assets/hackfont` via your font manager.
 
